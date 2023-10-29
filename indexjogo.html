@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="iconmario.webp" type="image/x-icon">
+    <title>Adivinhe o Número</title>
+</head>
+<body>
+    <header><input type="button" class="btn reset" value="reset"> <button class="btnmodal">Como Jogar?</button> </header>
+    <div class="janelamodal">
+        <h1>Bem vindo ao nosso jogo!</h1>
+        <li>
+            <ul>O objetivo do jogo é tentar adivinhar o numero secreto com o mínimo de tentativas.</ul>
+            <ul>O numero está entre 1 e 20.</ul>
+            <ul>Voce perde 1 ponto a cada tentativa.</ul>
+            <ul>Se os pontos chegarem a 0... <span class="textgrad">Game Over</span>.</ul>
+            <ul>Para reiniciar a pontuação, aperte no botão "reset".</ul>
+        </li>
+        <button class="close"> x </button>
+    </div>
+    <div class="overlay"></div>
+    <main>
+        <section class="intro">
+            <h1>Adivinhe o Número</h1>
+            <div class="secreto"> <hr> <img src="questionmark.gif" alt="question mark"></div>
+        </section>
+        <section class="esquerdo">
+            <input type="number" class="tentativa" min="0" max="20" step="1">
+            <input type="button" class="btn check" value="conferir">
+        </section>
+        <section class="direito">
+            <p class="status"> Tente a sorte!</p>
+            <p class="pontuacao"> Pontuação:20</p>
+            <p class="recorde"> Recorde: </p>
+        </section>
+    </main>
+    <footer><p>Jogo criado para fins didáticos por Heloisa Mendes</p></footer>
+</body>
+<script src="jogo.js"></script>
+</html>

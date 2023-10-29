@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Press Start 2P', cursive;
+    }
+    body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-image: radial-gradient(circle, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+        transition: 1s;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
+    header > button {
+        color: #555;
+        background: none;
+        border: none;
+    }
+    .btn {
+        width: 90px;
+        height: 50px;
+        border-radius: 7px;
+    }
+    .check {
+        width: auto;
+        padding: 10px;
+    }
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        place-items: center;
+    }
+    .intro {
+        grid-column: 1 / -1;
+        text-align: center;
+        color: #E8E417;
+        text-shadow: 5px 5px 5px black;
+        justify-self: stretch;
+    }
+    .intro h1 {
+       margin-bottom: 20px; 
+    }
+    .intro hr {
+        height: 10px;
+        background-color:  #E8E417;
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        z-index: -999;
+    }
+    .esquerdo, .direito {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .secreto {
+        position: relative;
+        margin-top: 200px;
+    }
+    .direito {
+        place-self: baseline;
+        align-items: flex-start;
+    }
+    .tentativa {
+        width: 160px;
+        height: 50px;
+        border: 4px solid #E8E417;
+        background-color: #c777b9;
+        color: white;
+        font-size: 40px;
+        text-align: center;
+    }
+    footer {
+        justify-self: center;
+        align-self: center;
+        font-size: 15px;
+        margin-top: 90px;
+        padding-bottom: 30px;
+    }
+    .janelamodal {
+    min-width: 300px;
+    max-width: 400px;
+    background-color: aliceblue;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.801);
+    border-radius: 10px;
+    padding: 15px;
+    display: none;
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 0.10;
+    font-size: 16px;
+    border: 2px solid yellow;
+    }
+    .janelamodal h1 {
+        background: #B7DEED;
+        background: linear-gradient(to right, #4fb5de 0%, #4A3DFF 25%, #21B4E2 75%, #1931CF 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        padding-bottom: 20px;
+        font-size: 27px;
+    }
+    .textgrad {
+        background: rgb(235, 27, 27);
+        background-image: 'radial-gradient(circle, #da0030, #e30037, #ed003f, #f60046, #ff004e)';
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .close {
+        font-size: 24px;
+        padding: 5px 10px 1px 5px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border: 0cm;
+        border-radius: 10px;
+    }
+    ul {
+        padding-bottom: 15px;
+    }
+    .overlay {
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.301);
+        backdrop-filter: blur(7px);
+        position: absolute;
+        top: 0%;
+        display: none;
+    }
+    @media (max-width: 760px) {
+        footer > p {
+            text-align: center;
+        }
+    }
+    @media (max-width: 479px) {
+        main {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        place-items: center;
+        }
+        .esquerdo, .direito {
+            display: grid;
+            grid-template-columns: 1fr;
+            place-items: center;
+            align-items: center;
+        }
+        .direito {
+            place-self: center;
+            align-items: center;
+        }
+    }
